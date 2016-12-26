@@ -13,7 +13,11 @@ app.use(function *(next){
 // response
 
 app.use(function *(){
+
   this.body = 'Hello World';
 });
 
-app.listen(3000);
+app.listen(3000,function() {
+  console.log(new Date() +
+    ': server is running, listening on port 3000');
+});
